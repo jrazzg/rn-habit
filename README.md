@@ -1,56 +1,50 @@
-# Welcome to your Expo app 👋
+# Habit Tracker App (Local)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A beginner-friendly React Native app that lets users create daily habits, mark them as completed, and track their progress over time. It’s local only → habit data is stored in memory or optionally in AsyncStorage, with no backend required.
 
-## Get started
+## Features
 
-1. Install dependencies
+* Create and manage daily habits
+* Mark habits as completed for the current day
+* Track current and longest streaks
+* View habit details and completion history
+* Save habit data locally using AsyncStorage (optional)
+* Navigate between Home → Habit Details → Statistics
 
-   ```bash
-   npm install
-   ```
+## Learning Goals
 
-2. Start the app
+* Practice React Navigation with Stack and optional Tab navigation
+* Manage shared state using useState and Context API
+* Work with dates and streak calculations
+* Implement CRUD operations (Create, Read, Update, Delete)
+* Persist data locally using AsyncStorage
+* Display progress and statistics using React Native components
 
-   ```bash
-   npx expo start
-   ```
+## Screens
 
-In the output, you'll find options to open the app in a
+### Home Screen
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* View all active habits
+* See today's completion progress
+* Add a new habit
+* Navigate to habit details
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Add Habit Screen
 
-## Get a fresh project
+* Create a new habit
+* Enter habit name and optional category
+* Save habit and return to Home
 
-When you're ready, run:
+### Habit Details Screen
 
-```bash
-npm run reset-project
-```
+* View habit information
+* Mark habit as completed for today
+* View current and longest streak
+* Edit or delete a habit
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Statistics Screen
 
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* View total habits
+* View completion rate
+* View best streaks
+* Track overall progress
