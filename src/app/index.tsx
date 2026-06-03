@@ -6,21 +6,32 @@ export default function Index() {
 
     return (
         <View style={styles.container}>
-            <Text>Total Habits: 3</Text>
-            <TouchableOpacity onPress={() => router.navigate('/StatsScreen')}><Text>View Stats</Text></TouchableOpacity>
+            <View style={styles.topContainer}>
+                <Text>Total Habits: 3</Text>
+                <TouchableOpacity onPress={() => router.navigate('/StatsScreen')}><Text>View Stats</Text></TouchableOpacity>
+            </View>
 
             <Text>Habit 1</Text>
             <Text>Habit 2</Text>
             <Text>Habit 3</Text>
-            <TouchableOpacity onPress={() => router.navigate('/NewHabitScreen')}><Text>Add Habit</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => router.navigate('/NewHabitScreen')}><Text style={styles.btnAddHabit}>Add Habit</Text></TouchableOpacity>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        alignItems: "center",
         justifyContent: "center",
+        padding: 20,
     },
+    topContainer: {
+        backgroundColor: '#bbbbbb',
+        padding: 5,
+        marginBottom: 20,
+    },
+    btnAddHabit: {
+        backgroundColor: '#7a82f3',
+        padding: 5,
+        color: '#ffffff',
+    }
 });
