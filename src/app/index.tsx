@@ -7,7 +7,7 @@ export default function Index() {
     return (
         <View style={styles.container}>
             <Text>Total Habits: 3</Text>
-            <TouchableOpacity><Text>View Stats</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => router.navigate('/StatsScreen')}><Text>View Stats</Text></TouchableOpacity>
 
             <Text>Habit 1</Text>
             <Text>Habit 2</Text>
