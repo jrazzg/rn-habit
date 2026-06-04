@@ -11,9 +11,14 @@ export default function Index() {
                 <TouchableOpacity onPress={() => router.navigate('/StatsScreen')}><Text>View Stats</Text></TouchableOpacity>
             </View>
 
-            <Text>Habit 1</Text>
-            <Text>Habit 2</Text>
-            <Text>Habit 3</Text>
+            <View style={styles.habits}>
+                <View style={styles.habit}>
+                    <Text>Habit 1</Text>
+                </View>
+                <View style={styles.habit}>
+                    <Text>Habit 1</Text>
+                </View>
+            </View>
             <TouchableOpacity onPress={() => router.navigate('/NewHabitScreen')}><Text style={styles.btnAddHabit}>Add Habit</Text></TouchableOpacity>
         </View>
     );
@@ -33,5 +38,17 @@ const styles = StyleSheet.create({
         backgroundColor: '#7a82f3',
         padding: 5,
         color: '#ffffff',
+    },
+    habit: {
+        display: 'flex',
+        backgroundColor: '#9b9b9b',
+        minWidth: 120,
+        minHeight: 120,
+        borderRadius: 10,
+        padding: 10,
+    },
+    habits: {
+        gap: 10,
+        marginBottom: 10,
     }
 });
